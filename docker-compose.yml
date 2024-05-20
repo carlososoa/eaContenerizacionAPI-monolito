@@ -1,0 +1,15 @@
+version: '3'
+services:
+  miapp:
+    container_name: miapp
+    image: miapp:v1
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
